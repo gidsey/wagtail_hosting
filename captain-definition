@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "dockerfileLines": [
+    "FROM python:3.10-slim-buster",
+    "RUN mkdir -p /usr/src/app",
+    "WORKDIR /usr/src/app",
+    "ENV PYTHONUNBUFFERED 1",
+    "ENV PYTHONDONTWRITEBYTECODE 1",
+    "ENV LANG en_GB.UTF-8",
+    "ENV PYTHONIOENCODING utf_8",
+    "RUN apt-get update --yes --quiet && apt-get install --yes --quiet --no-install-recommends build-essential libpq-dev libmariadbclient-dev libjpeg62-turbo-dev zlib1g-dev libwebp-dev python-dev && rm -rf /var/lib/apt/lists/*",
+    "COPY . /usr/src/app/",
+    "RUN pip install --upgrade pip",
+    "RUN pip install pipenv && pipenv install --system",
+    "COPY ./utils/ /usr/src/utils",
+    "EXPOSE 80",
+    "CMD sh /usr/src/utils/run.sh"
+  ]
+}
