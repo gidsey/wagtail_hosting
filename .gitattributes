@@ -1,0 +1,15 @@
+static/admin/** linguist-vendored
+static/js/** linguist-vendored
+static/wagtailadmin/** linguist-vendored
+static/wagtaildocs/** linguist-vendored
+static/wagtailembeds/** linguist-vendored
+static/wagtailimages/** linguist-vendored
+static/wagtailmenus/** linguist-vendored
+static/wagtailmodeladmin/** linguist-vendored
+static/wagtailredirects/** linguist-vendored
+static/wagtailsearch/** linguist-vendored
+static/wagtailsettings/** linguist-vendored
+static/wagtailsnippets/** linguist-vendored
+static/wagtailsytleguide/** linguist-vendored
+static/wagtailusers/** linguist-vendored
+staticfiles.json -linguist-vendored
